@@ -1,7 +1,6 @@
 # TomateCNN
-
-**Diagnóstico en tiempo real time de 10 enfermedades en hojas de tomate**  
-MobileNetV2 + TensorFlow Lite · 2025
+**Diagnóstico en tiempo real de 10 enfermedades en hojas de tomate**  
+MobileNetV2 + TensorFlow Lite · 2025  
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.17-orange)](https://www.tensorflow.org)
@@ -11,11 +10,20 @@ MobileNetV2 + TensorFlow Lite · 2025
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Live Demo**  
-<a href="https://tomatocnn-gaknc3pg2vlhazlbt8ob.streamlit.app" target="_blank">
-  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir TomateCNN en vivo" width="380"/>
+<a href="https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app" target="_blank">
+  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir en Streamlit" width="300"/>
 </a>
 
-**Autor:** Cristian Acevedo Cifuentes
+**Autor:** Cristian Acevedo Cifuentes  
+
+## Características clave
+
+- **10 clases**: 9 enfermedades de la hoja de tomate + hoja sana.
+- **Modelo ligero**: MobileNetV2 cuantizado a TFLite (~6 MB), ideal para tiempo real.
+- **Modo webcam**: Diagnóstico en vivo usando la cámara del PC.
+- **Dashboard web (Streamlit)**: Panel para cargar imágenes, revisar métricas y ver ejemplos.
+- **Reporte de sesión**: Registro de hojas analizadas, clases predichas y niveles de confianza.
+- **Entrenado con datos reales**: Dataset de tomate con más de 11.000 imágenes anotadas.
 
 ---
 
@@ -34,22 +42,85 @@ MobileNetV2 + TensorFlow Lite · 2025
 
 | Archivo                    | Descripción                                           |
 |----------------------------|-------------------------------------------------------|
-| `detector_tomates.py`      | Detector en tiempo real con webcam                    |
+| `detector_tomates.py`      | Detector en tiempo real con webcam (OpenCV)           |
 | `panel_gestion.py`         | Dashboard web profesional (Streamlit)                 |
-| `procesador_lotes.py`      | Evaluación masiva                                     |
-| `generar_matriz_full.py`   | Métricas + matriz de confusión                        |
-| `test_model_info.py`       | Diagnóstico del modelo                                |
+| `procesador_lotes.py`      | Evaluación masiva sobre carpetas                      |
+| `generar_matriz_full.py`   | Métricas completas + matriz de confusión              |
+| `test_model_info.py`       | Diagnóstico rápido del modelo                         |
 | `model.tflite`             | Modelo cuantizado (~6 MB)                             |
 
 ---
+## Estructura del proyecto
+
+```text
+TomateCNN/
+├─ panel_gestion.py         # Dashboard web en Streamlit
+├─ detector_tomates.py      # Detección en tiempo real con webcam
+├─ procesador_lotes.py      # Procesamiento por lotes (carpetas de imágenes)
+├─ generar_matriz_full.py   # Cálculo de métricas + matriz de confusión
+├─ test_model_info.py       # Info rápida del modelo TFLite
+├─ model.tflite             # Modelo entrenado y cuantizado
+├─ labels.json              # Mapeo índice → nombre de enfermedad
+├─ requirements.txt         # Dependencias para la app
+└─ assets/
+   └─ tablero_streamlit.jpg # Captura del dashboard web
+```
+## Requisitos
+
+- **Python**: 3.10 o 3.11 (recomendado)
+- **Sistema**: Windows / Linux con webcam (para el detector en vivo)
+- **Dependencias**: se instalan con `requirements.txt`
+
+>  Nota  
+> El modelo que usa la app está en formato **TFLite (`model.tflite`)**, por lo que **no es necesario instalar TensorFlow completo** para correr el dashboard o el detector en tiempo real.  
+> TensorFlow solo se utiliza en la etapa de **entrenamiento** del modelo lo pueden buscar en el repositorio como Entrenamiento_CNN_Tomates.ipynb
+
+## Instalación
+
+```bash
+git clone https://github.com/Cristian-Acevedo-C/TomateCNN.git
+cd TomateCNN
+
+# (Opcional) Crear entorno virtual
+python -m venv .venv
+# En Windows:
+# .venv\Scripts\activate
+# En Linux/Mac:
+# source .venv/bin/activate
+
+# Instalar dependencias
+pip install -r requirements.txt
+```
+
+## Uso rápido
+
+```bash
+# 1) Dashboard web (recomendado)
+streamlit run panel_gestion.py
+
+# 2) Detector con webcam
+python detector_tomates.py
+
+# 3) Procesar una carpeta de imágenes
+python procesador_lotes.py
+```
+
 
 ## Capturas
 
-### Dashboard web
-![Dashboard](capturas_tomate/dashboard_streamlit.jpg)
+## Dashboard web (Streamlit)
 
-### Matriz de confusión
-![Matriz](matriz_confusion_full.png)
+[![Dashboard web](assets/assetstablero_streamlit.jpg)](https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app/)
+
+**Live Demo**  
+<a href="https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app" target="_blank">
+  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir en Streamlit" width="360"/>
+</a>
+
+
+
+### Matriz de confusión (11 000 imágenes)
+![Matriz de confusión](matriz_confusion_full.png)
 
 ### Detector en tiempo real
 *Captura en proceso…*
