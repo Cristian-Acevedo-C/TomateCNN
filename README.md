@@ -45,9 +45,10 @@ MobileNetV2 + TensorFlow Lite · 2025
 [![Dashboard web](assets/assetstablero_streamlit.jpg)](https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app/)
 
 **Live Demo**  
-<a href="https://tomatocnn-gaknc3pg2vlhazlbt8ob.streamlit.app" target="_blank">
-  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir en Streamlit" width="300"/>
+<a href="https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app" target="_blank">
+  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir en Streamlit" width="360"/>
 </a>
+
 
 
 ### Matriz de confusión (11 000 imágenes)
