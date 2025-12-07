@@ -1,0 +1,13 @@
+{
+    "camera_index": 0,
+    "roi_size": 320,
+    "conf_threshold": 0.80,
+    "display_duration": 4.0,
+    "auto_capture": false,
+    "auto_delay": 3.0,
+    "debug_mode": false,
+    "beep_on_capture": true,
+    "flash_on_capture": true,
+    "arduino_port": "COM3",
+    "arduino_baud": 9600
+}

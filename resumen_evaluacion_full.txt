@@ -1,0 +1,38 @@
+Resumen de evaluacion del modelo (TRAIN + VAL)
+Fecha y hora:   2025-12-07T10:14:38.630417
+Dataset root:   C:\Users\crist\Downloads\tomato
+Subconjuntos:   train, val
+Total imagenes: 11000
+Accuracy global: 93.127% (10244/11000)
+Imagen matriz de confusion: matriz_confusion_full.png
+CSV matriz de confusion:    matriz_confusion_full.csv
+
+=== Accuracy por clase ===
+- Mancha Bact.         (Bacterial_spot                ) ->  93.3% (1026/1100)
+- Tizon Temp.          (Early_blight                  ) ->  84.5% (929/1100)
+- Tizon Tardio         (Late_blight                   ) ->  96.1% (1057/1100)
+- Moho Foliar          (Leaf_Mold                     ) ->  93.5% (1029/1100)
+- Septoria             (Septoria_leaf_spot            ) ->  89.5% (985/1100)
+- Acaro Rojo           (Spider_mites Two-spotted_spider_mite) ->  90.0% (990/1100)
+- Mancha Diana         (Target_Spot                   ) ->  92.6% (1019/1100)
+- Virus Rizado         (Tomato_Yellow_Leaf_Curl_Virus ) ->  99.2% (1091/1100)
+- Virus Mosaico        (Tomato_mosaic_virus           ) ->  99.9% (1099/1100)
+- Sana                 (healthy                       ) ->  92.6% (1019/1100)
+
+=== Classification report (sklearn) ===
+               precision    recall  f1-score   support
+
+ Mancha Bact.       0.98      0.93      0.95      1100
+  Tizon Temp.       0.94      0.84      0.89      1100
+ Tizon Tardio       0.94      0.96      0.95      1100
+  Moho Foliar       0.92      0.94      0.93      1100
+     Septoria       0.95      0.90      0.92      1100
+   Acaro Rojo       0.92      0.90      0.91      1100
+ Mancha Diana       0.86      0.93      0.89      1100
+ Virus Rizado       0.95      0.99      0.97      1100
+Virus Mosaico       0.89      1.00      0.94      1100
+         Sana       0.98      0.93      0.95      1100
+
+     accuracy                           0.93     11000
+    macro avg       0.93      0.93      0.93     11000
+ weighted avg       0.93      0.93      0.93     11000
