@@ -42,7 +42,7 @@ MobileNetV2 + TensorFlow Lite · 2025
 
 ## Dashboard web (Streamlit)
 
-[![Dashboard web](assetstablero_streamlit.jpg)](https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app/)
+[![Dashboard web](assets/assetstablero_streamlit.jpg)](https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app/)
 
 Live Demo  
 
