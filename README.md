@@ -62,12 +62,18 @@ MobileNetV2 + TensorFlow Lite · 2025
 
 ```bash
 pip install -r requirements.txt
+```
+
 Uso rápido
 Bash# Dashboard web (recomendado)
+```bash
 streamlit run panel_gestion.py
+```
 
 # Detector con webcam
+```bash
 python detector_tomates.py
+```
 
 Fuente del dataset
 Subconjunto “tomato” del dataset PlantVillage
