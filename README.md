@@ -1,6 +1,6 @@
 # TomateCNN
 
-**Diagnóstico en tiempo real de 9 enfermedades + hoja sana (10 clases) en hojas de tomate**  
+**Diagnóstico en tiempo real time de 10 enfermedades en hojas de tomate**  
 MobileNetV2 + TensorFlow Lite · 2025
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
@@ -9,6 +9,11 @@ MobileNetV2 + TensorFlow Lite · 2025
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.10-green)](https://opencv.org)
 [![Accuracy](https://img.shields.io/badge/Accuracy-93.1%25-brightgreen)](https://github.com/Cristian-Acevedo-C/TomateCNN)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**Live Demo**  
+<a href="https://tomatocnn-gaknc3pg2vlhazlbt8ob.streamlit.app" target="_blank">
+  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir TomateCNN en vivo" width="380"/>
+</a>
 
 **Autor:** Cristian Acevedo Cifuentes
 
@@ -29,30 +34,22 @@ MobileNetV2 + TensorFlow Lite · 2025
 
 | Archivo                    | Descripción                                           |
 |----------------------------|-------------------------------------------------------|
-| `detector_tomates.py`      | Detector en tiempo real con webcam (OpenCV)           |
+| `detector_tomates.py`      | Detector en tiempo real con webcam                    |
 | `panel_gestion.py`         | Dashboard web profesional (Streamlit)                 |
-| `procesador_lotes.py`      | Evaluación masiva sobre carpetas                      |
-| `generar_matriz_full.py`   | Métricas completas + matriz de confusión              |
-| `test_model_info.py`       | Diagnóstico rápido del modelo                         |
+| `procesador_lotes.py`      | Evaluación masiva                                     |
+| `generar_matriz_full.py`   | Métricas + matriz de confusión                        |
+| `test_model_info.py`       | Diagnóstico del modelo                                |
 | `model.tflite`             | Modelo cuantizado (~6 MB)                             |
 
 ---
 
 ## Capturas
 
-## Dashboard web (Streamlit)
+### Dashboard web
+![Dashboard](capturas_tomate/dashboard_streamlit.jpg)
 
-[![Dashboard web](assets/assetstablero_streamlit.jpg)](https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app/)
-
-**Live Demo**  
-<a href="https://tomatecnn-ganknc3pg2vlhaznlbt8ob.streamlit.app" target="_blank">
-  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Abrir en Streamlit" width="360"/>
-</a>
-
-
-
-### Matriz de confusión (11 000 imágenes)
-![Matriz de confusión](matriz_confusion_full.png)
+### Matriz de confusión
+![Matriz](matriz_confusion_full.png)
 
 ### Detector en tiempo real
 *Captura en proceso…*
