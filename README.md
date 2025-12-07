@@ -75,6 +75,18 @@ TomateCNN/
 > El modelo que usa la app está en formato **TFLite (`model.tflite`)**, por lo que **no es necesario instalar TensorFlow completo** para correr el dashboard o el detector en tiempo real.  
 > TensorFlow solo se utiliza en la etapa de **entrenamiento** del modelo lo pueden buscar en el repositorio como Entrenamiento_CNN_Tomates.ipynb
 
+
+## Instalación
+## Requisitos
+
+- **Python**: 3.10 o 3.11 (recomendado)
+- **Sistema**: Windows / Linux con webcam (para el detector en vivo)
+- **Dependencias**: se instalan con `requirements.txt`
+
+> Nota  
+> El modelo que usa la app está en formato **TFLite (`model.tflite`)**, por lo que **no es necesario instalar TensorFlow completo** para correr el dashboard o el detector en tiempo real.  
+> TensorFlow solo se utiliza en la etapa de **entrenamiento** del modelo, lo pueden buscar en el repositorio como `Entrenamiento_CNN_Tomates.ipynb`.
+
 ## Instalación
 
 ```bash
@@ -90,7 +102,6 @@ python -m venv .venv
 
 # Instalar dependencias
 pip install -r requirements.txt
-```
 
 ## Uso rápido
 
@@ -104,6 +115,26 @@ python detector_tomates.py
 # 3) Procesar una carpeta de imágenes
 python procesador_lotes.py
 ```
+## Dataset y referencias
+
+El modelo fue entrenado con un subconjunto de datos de tomate (hojas sanas y enfermas) derivado del dataset **PlantVillage**, con más de **11.000 imágenes** distribuidas en 10 clases:
+
+- Hoja sana  
+- Bacterial Spot  
+- Early Blight (Tizón temprano)  
+- Late Blight (Tizón tardío)  
+- Leaf Mold  
+- Septoria Leaf Spot  
+- Spider Mites (Arañita roja)  
+- Target Spot  
+- Mosaic Virus  
+- Yellow Leaf Curl Virus  
+
+**Referencia del dataset original:**
+
+- Hughes, D. P., & Salathé, M. (2015). *An open access repository of images on plant health to enable the development of mobile disease diagnostics*. arXiv:1511.08060.  
+- Versión usada en Kaggle: https://www.kaggle.com/datasets/kaustubhb999/tomatoleaf  
+- Licencia: **CC0 Public Domain** (para el dataset original PlantVillage).
 
 
 ## Capturas
@@ -133,15 +164,6 @@ python procesador_lotes.py
 pip install -r requirements.txt
 ```
 
-Uso rápido
-Bash# Dashboard web (recomendado)
-```bash
-streamlit run panel_gestion.py
-```
-
-# Detector con webcam
-```bash
-python detector_tomates.py
 ```
 
 Fuente del dataset
